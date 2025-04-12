@@ -627,17 +627,17 @@ char *generate_schedule_html(MeetingScheduler *scheduler) {
      init_scheduler(&scheduler);
  
      // Optionally, preload some sample data.
-     reserve_slot(&scheduler, "Monday", "14:00", 60);
-     reserve_slot(&scheduler, "Wednesday", "15:00", 30);
-     Meeting sampleMeetings[] = {
-         {"One-to-one with Ian", "one-to-one", 1, {2, 3, 4, 5, 6, 7, -1}, "", "", "weekly"},
-         {"One-to-one with Fari", "one-to-one", 1, {2, 3, 4, 5, 6, 7, -1}, "", "", "weekly"},
-         {"One-to-one with Perith", "one-to-one", 1, {2, 3, 4, 5, 6, 7, -1}, "", "", "weekly"}
-     };
-     int sampleCount = sizeof(sampleMeetings)/sizeof(sampleMeetings[0]);
-     for (int i = 0; i < sampleCount; i++) {
-         add_meeting(&scheduler, &sampleMeetings[i]);
-     }
+    //  reserve_slot(&scheduler, "Monday", "14:00", 60);
+    //  reserve_slot(&scheduler, "Wednesday", "15:00", 30);
+    //  Meeting sampleMeetings[] = {
+    //      {"One-to-one with Ian", "one-to-one", 1, {2, 3, 4, 5, 6, 7, -1}, "", "", "weekly"},
+    //      {"One-to-one with Fari", "one-to-one", 1, {2, 3, 4, 5, 6, 7, -1}, "", "", "weekly"},
+    //      {"One-to-one with Perith", "one-to-one", 1, {2, 3, 4, 5, 6, 7, -1}, "", "", "weekly"}
+    //  };
+    //  int sampleCount = sizeof(sampleMeetings)/sizeof(sampleMeetings[0]);
+    //  for (int i = 0; i < sampleCount; i++) {
+    //      add_meeting(&scheduler, &sampleMeetings[i]);
+    //  }
  
      struct MHD_Daemon *daemon;
      daemon = MHD_start_daemon(MHD_USE_SELECT_INTERNALLY, PORT, NULL, NULL,
